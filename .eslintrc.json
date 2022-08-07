@@ -1,0 +1,21 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:cypress/recommended",
+    "plugin:mocha/recommended"
+  ],
+  "plugins": ["cypress", "mocha"],
+  "rules": {
+    "no-console": "off",
+    "mocha/no-mocha-arrows": "off"
+  },
+  "globals": {
+    "describe": true,
+    "it": true
+  }
+}

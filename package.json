@@ -14,15 +14,19 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
+    "*.{js,md}": [
+      "prettier --write"
     ]
   },
   "author": "vishali",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^10.0.1",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-mocha": "^10.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "2.7.1"
