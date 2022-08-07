@@ -1,0 +1,30 @@
+{
+  "name": "gleb-cy-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tests": "cypress open",
+    "e2e": "cypress run",
+    "format": "prettier --write \"**/*.{js,json}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "author": "vishali",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.0.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1"
+  }
+}
