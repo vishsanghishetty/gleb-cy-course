@@ -7,7 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: npm-install
-      - uses: ./.github/vishsanghishetty/gleb-cy-course/npm-install
+      - uses: ./.github/vishsanghishetty/gleb-cy-course/
+      - run: npm-install
       - run: npm run format
       - run: git status
 
