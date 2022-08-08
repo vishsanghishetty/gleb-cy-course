@@ -1,25 +1,25 @@
-name: Prettier
+name: run prettier on repo
 on: [push]
 jobs:
   build:
-    name: Prettier
+    name: prettier
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
       - name: install npm
-        uses: npm-install
+      - uses: npm-install
 
       - uses: ./.github/vishsanghishetty/gleb-cy-course/
       - run: npm-install
 
-      -name: lint repo
+      - name: lint repo
       - run: npm run format
 
-      -name: check git status
+      - name: check git status
       - run: git status
-      
+
       # commit any changed files
       # https://github.com/mikeal/publish-to-github-action
       - uses: mikeal/publish-to-github-action@master
