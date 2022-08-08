@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - uses: vishsanghishetty/gleb-cy-course
+      - uses: ./.github/actions/vishsanghishetty/gleb-cy-course
       - run: npm-install
       - run: npm run format
       - run: git status
