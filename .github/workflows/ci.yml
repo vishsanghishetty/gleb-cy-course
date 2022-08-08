@@ -5,19 +5,10 @@ jobs:
     name: prettier
     runs-on: ubuntu-latest
     steps:
-      - name: checkout repo
       - uses: actions/checkout@v2
-
-      - name: install npm
       - uses: npm-install
-
-      - uses: ./.github/vishsanghishetty/gleb-cy-course/
-      - run: npm-install
-
-      - name: lint repo
+      - uses: ./.github/vishsanghishetty/gleb-cy-course/npm-install
       - run: npm run format
-
-      - name: check git status
       - run: git status
 
       # commit any changed files
