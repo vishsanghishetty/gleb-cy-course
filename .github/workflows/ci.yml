@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: vishsanghishetty/npm-install@v1
+      - uses: vishsanghishetty
       - run: npm run format
       - run: git status
       # commit any changed files
